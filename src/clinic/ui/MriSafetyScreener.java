@@ -62,7 +62,7 @@ public class MriSafetyScreener extends JFrame {
         gbc.gridy = 1;
         mainPanel.add(patientIdInput, gbc);
 
-        // Input: Initials
+        // Input: INITIALS
         gbc.gridy = 2;
         JLabel lblInit = new JLabel("Patient Initials:");
         lblInit.setForeground(khakiText);

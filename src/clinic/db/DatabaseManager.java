@@ -16,7 +16,7 @@ public class DatabaseManager {
             pstmt.setString(2, status);
             pstmt.executeUpdate();
             
-            System.out.println("✅ DATABASE SUCCESS: Result saved for " + patientId);
+            System.out.println("✅ DATABASE SUCCESS -> Result saved for " + patientId);
             
         } catch (SQLException e) {
            

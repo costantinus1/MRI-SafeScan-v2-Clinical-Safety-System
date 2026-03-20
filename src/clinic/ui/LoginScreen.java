@@ -48,7 +48,7 @@ public class LoginScreen extends JFrame {
         loginButton.setFont(new Font("SansSerif", Font.BOLD, 14));
         gbc.gridy = 3;
         
-        // This is the logic that opens the MRI Checklist..
+        // This is the logic that opens the MRI Checklist...
         loginButton.addActionListener(e -> {
             String enteredID = staffIdField.getText();
           

@@ -1,4 +1,4 @@
--- 1. Create the Clinical Database
+-- 1. Create the Clinical Database--
 
 CREATE DATABASE IF NOT EXISTS clinic_db;
 USE clinic_db;
