@@ -9,7 +9,7 @@ public class LoginScreen extends JFrame {
     private JButton loginButton;
 
     public LoginScreen() {
-        setTitle("SafeScan v1.0 - Staff Authorization");
+        setTitle("SafeScan v2 .0 - Staff Authorization");
         setSize(400, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null); 
@@ -17,8 +17,7 @@ public class LoginScreen extends JFrame {
         setLayout(new GridBagLayout());
 
         buildLoginUI();
-        
-        // This is the "Magic Trick" to make hitting ENTER work!
+  
         this.getRootPane().setDefaultButton(loginButton);
         
         setVisible(true);
@@ -49,16 +48,16 @@ public class LoginScreen extends JFrame {
         loginButton.setFont(new Font("SansSerif", Font.BOLD, 14));
         gbc.gridy = 3;
         
-        // This is the logic that opens your MRI Checklist
+        // This is the logic that opens the MRI Checklist..
         loginButton.addActionListener(e -> {
             String enteredID = staffIdField.getText();
-            // Let's create a "Master Key" for your demo
-            if (enteredID.equals("ADMIN")) {
+          
+            if (enteredID.equals("Infirmus")) {
                 new MriSafetyScreener(); 
                 dispose();               
                 System.out.println("🔓 Access Granted: Staff authorized.");
             } else {
-                // This is the "False Pass" handling
+                // Also"False Pass" handling..
                 JOptionPane.showMessageDialog(this, 
                     "INVALID STAFF ID: Access Denied.", 
                     "Security Alert", 
@@ -71,7 +70,7 @@ public class LoginScreen extends JFrame {
     }
 
     public static void main(String[] args) {
-        // ALWAYS run the project from here!
+      
         SwingUtilities.invokeLater(() -> new LoginScreen());
     }
 }

@@ -30,7 +30,7 @@ public class MriSafetyScreener extends JFrame {
 
         JLabel logoLabel = new JLabel();
         try {
-            // Using the proven path from your successful test
+            
             ImageIcon icon = new ImageIcon("src/hospital_logo.jpg");
             if (icon.getIconWidth() > 0) {
                 Image scaled = icon.getImage().getScaledInstance(85, 85, Image.SCALE_SMOOTH);
@@ -44,7 +44,7 @@ public class MriSafetyScreener extends JFrame {
         brandingHeader.add(logoLabel);
         add(brandingHeader, BorderLayout.NORTH);
 
-        // --- 3. CLINICAL INTERFACE (CENTER) ---
+        // 3 CLINICAL INTERFACE (CENTER) 
         JPanel mainPanel = new JPanel(new GridBagLayout());
         mainPanel.setBackground(forestGreen);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -119,7 +119,7 @@ public class MriSafetyScreener extends JFrame {
 
         add(mainPanel, BorderLayout.CENTER);
 
-        // --- 4. OPERATIONS ---
+        // 4. OPERATIONS 
         btnExecute.addActionListener(e -> runSafetyLogic());
 
         setLocationRelativeTo(null);
@@ -148,7 +148,7 @@ public class MriSafetyScreener extends JFrame {
             safetyStatusFooter.setForeground(new Color(185, 195, 120));
         }
 
-        // Save result to Audit Trail
+        // Save result to Safety sceening history
         DatabaseManager.saveResult(patientId, status);
     }
 }
